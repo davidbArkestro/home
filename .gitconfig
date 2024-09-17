@@ -1,0 +1,7 @@
+[user]
+	email = david.bray@arkestro.com
+	name = davidbArkestro
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
