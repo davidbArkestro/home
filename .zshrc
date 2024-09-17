@@ -58,6 +58,8 @@ shell::path::init() {
     export PATH="$PATH:/usr/sbin"
     export PATH="$PATH:/bin"
     export PATH="$PATH:/sbin"
+    export PATH="$PATH:/.local/bin"
+    export PATH="$PATH:/opt/homebrew/opt/postgresql@14/bin"
 
 }
 
