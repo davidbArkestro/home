@@ -49,6 +49,7 @@ homebrew::bootstrap() {
 shell::path::init() {
 
 #    export PATH=""
+    # export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.12/bin"
     export PATH="$PATH:/opt/X11/bin"
     export PATH="$PATH:/opt/homebrew/bin"
     export PATH="$PATH:/opt/homebrew/sbin"
@@ -58,8 +59,12 @@ shell::path::init() {
     export PATH="$PATH:/usr/sbin"
     export PATH="$PATH:/bin"
     export PATH="$PATH:/sbin"
-    export PATH="$PATH:/.local/bin"
+    # export PATH="$PATH:$HOME/.local/bin"
     export PATH="$PATH:/opt/homebrew/opt/postgresql@14/bin"
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    
 
 }
 
